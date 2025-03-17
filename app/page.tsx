@@ -1,6 +1,5 @@
 "use client";
 import { Card, CardContent } from "@/components/ui/card";
-import { motion } from "framer-motion";
 import { useState, useRef } from "react";
 
 export default function HomePage() {
@@ -83,13 +82,7 @@ export default function HomePage() {
 
   return (
     <main className="flex min-h-screen items-center justify-center bg-gray-100">
-      <motion.div
-        ref={boxRef}
-        
-        dragConstraints={{ top: -300, bottom: 300, left: -500, right: 500 }}
-        whileDrag={{ scale: 1.05 }}
-        className="relative"
-      >
+      <div ref={boxRef} className="relative">
         <Card
           className="shadow-lg"
           style={{ width: boxWidth, height: boxHeight }}
@@ -133,7 +126,7 @@ export default function HomePage() {
             onPointerDown={handlePointerDownBottom}
           ></div>
         </Card>
-      </motion.div>
+      </div>
     </main>
   );
 }
