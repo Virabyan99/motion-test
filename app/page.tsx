@@ -85,7 +85,7 @@ export default function HomePage() {
     <main className="flex min-h-screen items-center justify-center bg-gray-100">
       <motion.div
         ref={boxRef}
-        drag
+        
         dragConstraints={{ top: -300, bottom: 300, left: -500, right: 500 }}
         whileDrag={{ scale: 1.05 }}
         className="relative"
